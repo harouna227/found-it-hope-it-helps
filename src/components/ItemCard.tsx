@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -13,7 +14,7 @@ interface ItemCardProps {
   imageUrl?: string;
 }
 
-const ItemCard = ({ title, description, location, date, type, imageUrl }: ItemCardProps) => {
+const ItemCard = ({ id, title, description, location, date, type, imageUrl }: ItemCardProps) => {
   return (
     <Card className="overflow-hidden hover:shadow-[var(--shadow-hover)] transition-all duration-300 bg-gradient-to-br from-card to-card/80">
       {imageUrl && (
@@ -47,8 +48,8 @@ const ItemCard = ({ title, description, location, date, type, imageUrl }: ItemCa
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full" variant="outline">
-          View Details
+        <Button className="w-full" variant="outline" asChild>
+          <Link to={`/item/${id}`}>View Details</Link>
         </Button>
       </CardFooter>
     </Card>
