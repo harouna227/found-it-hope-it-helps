@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, ArrowLeft, User, Mail, Phone, Tag } from "lucide-react";
+import ShareButton from "@/components/ShareButton";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -36,14 +37,21 @@ const ItemDetail = () => {
       <Navbar />
       <main className="flex-1 py-12 bg-muted/30">
         <div className="container mx-auto px-4">
-          <Button 
-            variant="ghost" 
-            onClick={() => navigate("/")}
-            className="mb-6"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Listings
-          </Button>
+          <div className="flex items-center justify-between mb-6">
+            <Button 
+              variant="ghost" 
+              onClick={() => navigate("/")}
+            >
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to Listings
+            </Button>
+            
+            <ShareButton 
+              title={item.title}
+              description={item.description}
+              url={window.location.href}
+            />
+          </div>
 
           <div className="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto">
             {/* Image Section */}
