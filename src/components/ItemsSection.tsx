@@ -1,4 +1,10 @@
 import ItemCard from "./ItemCard";
+import walletImg from "@/assets/wallet.jpg";
+import backpackImg from "@/assets/backpack.jpg";
+import dogImg from "@/assets/dog.jpg";
+import iphoneImg from "@/assets/iphone.jpg";
+import keysImg from "@/assets/keys.jpg";
+import watchImg from "@/assets/watch.jpg";
 
 interface ItemsSectionProps {
   title: string;
@@ -13,7 +19,7 @@ const mockItems = [
     location: "Central Park, New York",
     date: "2025-11-05",
     type: "lost" as const,
-    imageUrl: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&auto=format&fit=crop",
+    imageUrl: walletImg,
   },
   {
     id: "2",
@@ -22,7 +28,7 @@ const mockItems = [
     location: "Downtown Library",
     date: "2025-11-04",
     type: "lost" as const,
-    imageUrl: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop",
+    imageUrl: backpackImg,
   },
   {
     id: "3",
@@ -31,7 +37,7 @@ const mockItems = [
     location: "Riverside Park",
     date: "2025-11-03",
     type: "lost" as const,
-    imageUrl: "https://images.unsplash.com/photo-1633722715463-d30f4f325e24?w=800&auto=format&fit=crop",
+    imageUrl: dogImg,
   },
 ];
 
@@ -43,7 +49,7 @@ const mockFoundItems = [
     location: "Main Street Cafe",
     date: "2025-11-05",
     type: "found" as const,
-    imageUrl: "https://images.unsplash.com/photo-1678652633473-e53e8a200e3c?w=800&auto=format&fit=crop",
+    imageUrl: iphoneImg,
   },
   {
     id: "5",
@@ -52,7 +58,7 @@ const mockFoundItems = [
     location: "5th Avenue Bus Stop",
     date: "2025-11-04",
     type: "found" as const,
-    imageUrl: "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&auto=format&fit=crop",
+    imageUrl: keysImg,
   },
   {
     id: "6",
@@ -61,7 +67,7 @@ const mockFoundItems = [
     location: "City Fitness Center",
     date: "2025-11-03",
     type: "found" as const,
-    imageUrl: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&auto=format&fit=crop",
+    imageUrl: watchImg,
   },
 ];
 
