@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
@@ -15,11 +16,11 @@ const Hero = () => {
               Report what you've lost or found and help reunite items with their owners.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button variant="hero" size="lg">
-                Report Lost Item
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/post-item">Report Lost Item</Link>
               </Button>
-              <Button variant="outline" size="lg">
-                Report Found Item
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/post-item">Report Found Item</Link>
               </Button>
             </div>
           </div>
